@@ -31,7 +31,7 @@ export default function Home() {
                   <Plus className="h-5 w-5 bg-primary text-primary-foreground rounded-full p-0.5" />
                   <span>Welcome to MediHome</span>
                 </div>
-                <h1 className="text-4xl md:text-6xl font-bold tracking-tighter text-shadow-lg">
+                <h1 className="text-4xl md:text-6xl font-bold tracking-tighter text-white text-shadow-lg">
                   We Are Here To Hear And Heal Your Health Problems
                 </h1>
                 <p className="font-semibold text-lg md:text-xl text-gray-200 text-shadow">
@@ -45,13 +45,13 @@ export default function Home() {
                 </a>
               </div>
               <div className="flex flex-col gap-6">
-                <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+                <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white">
                   <CardContent className="p-6 text-center">
                     <p className="text-5xl font-bold">25+</p>
                     <p className="text-lg text-gray-200">Years of Experience</p>
                   </CardContent>
                 </Card>
-                <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+                <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white">
                   <CardContent className="p-6 text-center">
                     <p className="text-5xl font-bold">140+</p>
                     <p className="text-lg text-gray-200">Specialist Doctors</p>
