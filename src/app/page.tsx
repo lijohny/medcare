@@ -298,7 +298,7 @@ export default function HomePage() {
         </section>
 
         {/* How It Works Section */}
-        <section id="how-it-works" className="py-16 md:py-24 bg-gray-50">
+        <section id="how-it-works" className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
               <div className="space-y-4">
