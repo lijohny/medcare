@@ -169,26 +169,26 @@ export default function HomePage() {
         </section>
 
         {/* Commitment Section */}
-        <section id="commitment" className="py-16 md:py-24 bg-gray-900 text-white">
+        <section id="commitment" className="py-16 md:py-24 bg-zinc-800 text-white">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="max-w-4xl mx-auto text-center space-y-8">
-              <div className="flex items-center justify-center gap-2 text-sm font-semibold tracking-wider uppercase text-yellow-400">
-                <Plus className="h-5 w-5 bg-yellow-400 text-black rounded-full p-0.5" />
+            <div className="max-w-4xl mx-auto text-left space-y-6">
+              <div className="flex items-center gap-2 text-sm font-semibold tracking-wider uppercase text-orange-500">
+                <Plus className="h-5 w-5 bg-orange-500 text-black rounded-full p-0.5" />
                 <span>Our Commitment</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold leading-tight text-white">
+              <h2 className="text-4xl font-bold leading-tight text-white">
                 Dedicated To Excellence In Healthcare Through Trusted Partnerships
               </h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
+              <p className="text-gray-300 max-w-3xl">
                 We are committed to providing exceptional care by working with leading healthcare professionals, technology providers, and trusted partners.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center pt-8">
-                <Image src="https://placehold.co/150x60/ffffff/000000.png?text=Logo" alt="Partner Logo 1" width={150} height={60} className="grayscale hover:grayscale-0 transition-all" />
-                <Image src="https://placehold.co/150x60/ffffff/000000.png?text=Logo" alt="Partner Logo 2" width={150} height={60} className="grayscale hover:grayscale-0 transition-all" />
-                <Image src="https://placehold.co/150x60/ffffff/000000.png?text=Logo" alt="Partner Logo 3" width={150} height={60} className="grayscale hover:grayscale-0 transition-all" />
-                <Image src="https://placehold.co/150x60/ffffff/000000.png?text=Logo" alt="Partner Logo 4" width={150} height={60} className="grayscale hover:grayscale-0 transition-all" />
-                <Image src="https://placehold.co/150x60/ffffff/000000.png?text=Logo" alt="Partner Logo 5" width={150} height={60} className="grayscale hover:grayscale-0 transition-all" />
-                <Image src="https://placehold.co/150x60/ffffff/000000.png?text=Logo" alt="Partner Logo 6" width={150} height={60} className="grayscale hover:grayscale-0 transition-all" />
+                <Image src="https://placehold.co/150x60/ffffff/000000.png?text=logoipsum" alt="Partner Logo 1" width={150} height={60} className="grayscale hover:grayscale-0 transition-all" />
+                <Image src="https://placehold.co/150x60/ffffff/000000.png?text=logoipsum" alt="Partner Logo 2" width={150} height={60} className="grayscale hover:grayscale-0 transition-all" />
+                <Image src="https://placehold.co/150x60/ffffff/000000.png?text=logoipsum" alt="Partner Logo 3" width={150} height={60} className="grayscale hover:grayscale-0 transition-all" />
+                <Image src="https://placehold.co/150x60/ffffff/000000.png?text=logoipsum" alt="Partner Logo 4" width={150} height={60} className="grayscale hover:grayscale-0 transition-all" />
+                <Image src="https://placehold.co/150x60/ffffff/000000.png?text=logoipsum" alt="Partner Logo 5" width={150} height={60} className="grayscale hover:grayscale-0 transition-all" />
+                <Image src="https://placehold.co/150x60/ffffff/000000.png?text=logoipsum" alt="Partner Logo 6" width={150} height={60} className="grayscale hover:grayscale-0 transition-all" />
               </div>
             </div>
           </div>
