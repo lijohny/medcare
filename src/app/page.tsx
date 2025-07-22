@@ -169,7 +169,7 @@ export default function HomePage() {
         </section>
 
         {/* Commitment Section */}
-        <section id="commitment" className="py-16 md:py-24 bg-gray-800 text-white">
+        <section id="commitment" className="py-16 md:py-24 bg-[#111827] text-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center space-y-8">
               <div className="flex items-center justify-center gap-2 text-sm font-semibold tracking-wider uppercase text-yellow-400">
