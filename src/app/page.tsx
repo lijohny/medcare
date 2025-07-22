@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Stethoscope, Users, MessageSquareText, CalendarDays, ClipboardPen, Syringe } from 'lucide-react';
+import { Stethoscope, Users, MessageSquareText, CalendarDays, ClipboardPen, Syringe, Plus, ArrowRight } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function Home() {
@@ -7,9 +7,8 @@ export default function Home() {
     <div className="flex flex-col min-h-[100dvh]">
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center text-center text-white overflow-hidden">
+        <section className="relative h-auto min-h-[calc(100vh-5rem)] flex items-center justify-center text-white overflow-hidden py-20 md:py-32">
           <div className="absolute inset-0 z-0 bg-gray-700">
-            {/* The video will be sourced from a CDN in a real application */}
             <video
               className="w-full h-full object-cover brightness-50"
               autoPlay
@@ -26,16 +25,40 @@ export default function Home() {
             </video>
           </div>
           <div className="relative z-10 container mx-auto px-4 md:px-6">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 text-shadow-lg">
-              Your Health, Our Priority Anytime, Anywhere
-            </h1>
-            <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-200 mb-8 text-shadow">
-              We are dedicated to providing the best healthcare services for you
-              and your family.
-            </p>
-            <Button size="lg" variant="default">
-              Book an Appointment
-            </Button>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6 text-center lg:text-left">
+                <div className="flex items-center justify-center lg:justify-start gap-2 text-sm font-semibold tracking-wider uppercase text-primary">
+                  <Plus className="h-5 w-5 bg-primary text-primary-foreground rounded-full p-0.5" />
+                  <span>Welcome to MediHome</span>
+                </div>
+                <h1 className="text-4xl md:text-6xl font-bold tracking-tighter text-shadow-lg">
+                  We Are Here To Hear And Heal Your Health Problems
+                </h1>
+                <p className="font-semibold text-lg md:text-xl text-gray-200 text-shadow">
+                  MediHome - Your Trusted Partner in Healthcare
+                </p>
+                <p className="max-w-xl mx-auto lg:mx-0 text-gray-300">
+                  Comprehensive medical care with expert doctors, advanced technology, and compassionate service. Your health, our priority.
+                </p>
+                <a href="#" className="inline-flex items-center gap-2 font-medium text-white hover:text-primary transition-colors">
+                  View location <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+              <div className="flex flex-col gap-6">
+                <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+                  <CardContent className="p-6 text-center">
+                    <p className="text-5xl font-bold">25+</p>
+                    <p className="text-lg text-gray-200">Years of Experience</p>
+                  </CardContent>
+                </Card>
+                <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+                  <CardContent className="p-6 text-center">
+                    <p className="text-5xl font-bold">140+</p>
+                    <p className="text-lg text-gray-200">Specialist Doctors</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
           </div>
         </section>
 
