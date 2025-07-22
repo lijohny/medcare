@@ -33,7 +33,7 @@ export function Header() {
         'sticky top-0 z-50 w-full transition-all duration-300',
         isScrolled
           ? 'bg-background/80 backdrop-blur-sm border-b'
-          : 'bg-black/20',
+          : 'bg-white/30 backdrop-blur-sm',
       )}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
@@ -41,7 +41,7 @@ export function Header() {
           <Hospital className="h-8 w-8 text-primary" />
           <span className={cn(
               'font-bold text-xl',
-               isScrolled ? 'text-foreground' : 'text-white'
+               'text-foreground'
             )}>
             MediHome
           </span>
@@ -54,7 +54,7 @@ export function Header() {
               href={link.href}
               className={cn(
                 'transition-colors hover:text-primary',
-                isScrolled ? 'text-foreground/80' : 'text-gray-200'
+                'text-foreground/80'
               )}
             >
               {link.label}
@@ -65,23 +65,23 @@ export function Header() {
         <div className="hidden lg:flex items-center space-x-6">
             <div className={cn(
                 'flex items-center gap-2',
-                isScrolled ? 'text-foreground' : 'text-white'
+                'text-foreground'
                 )}>
               <Clock className="h-5 w-5" />
               <div className="text-xs">
                 <p className="font-medium">Open Hours</p>
-                <p className={isScrolled ? 'text-muted-foreground' : 'text-gray-300'}>Monday-Saturday 9AM - 6PM</p>
+                <p className={'text-muted-foreground'}>Monday-Saturday 9AM - 6PM</p>
               </div>
             </div>
            <Button variant="outline" className={cn(
-               isScrolled ? 'border-primary text-primary hover:bg-primary hover:text-primary-foreground' : 'border-white text-white hover:bg-white hover:text-black'
+               isScrolled ? 'border-primary text-primary hover:bg-primary hover:text-primary-foreground' : 'border-primary text-primary hover:bg-primary hover:text-primary-foreground'
            )}>Book Appointment</Button>
         </div>
 
         <div className="lg:hidden flex items-center gap-2">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className={cn(isScrolled ? 'text-foreground' : 'text-white hover:bg-white/20 hover:text-white')}>
+              <Button variant="ghost" size="icon" className={cn('text-foreground hover:bg-black/20 hover:text-foreground')}>
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Open menu</span>
               </Button>
