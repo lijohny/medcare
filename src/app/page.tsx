@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Stethoscope, Users, MessageSquareText, CalendarDays, ClipboardPen, Syringe, Plus, ArrowRight, User, FolderPlus, History, PlayCircle, Home, Eye } from 'lucide-react';
+import { Stethoscope, Users, MessageSquareText, CalendarDays, ClipboardPen, Syringe, Plus, ArrowRight, User, FolderPlus, History, PlayCircle, Home, Eye, Beaker, HeartPulse, Hospital } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 
@@ -236,6 +236,67 @@ export default function HomePage() {
                 <p className="text-gray-600">
                   Receive a personalized treatment plan and ongoing support.
                 </p>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section id="services" className="py-16 md:py-24 bg-gray-50">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <div className="flex items-center justify-center gap-2 text-sm font-semibold tracking-wider uppercase text-primary">
+                  <Plus className="h-5 w-5" />
+                  <span>Our Services</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mt-2">Comprehensive Healthcare Solutions</h2>
+              <p className="mt-4 text-gray-600">
+                At MediHome, we offer a wide range of medical services tailored to your needs, from routine check-ups to specialized treatments.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="bg-white/80 backdrop-blur-sm shadow-lg rounded-2xl p-8 text-center flex flex-col items-center">
+                <div className="bg-primary/10 text-primary p-4 rounded-full mb-4">
+                  <Syringe className="h-8 w-8" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">General Medical Consultation</h3>
+                <p className="text-sm text-gray-600">Comprehensive medical check-ups and consultations for various health concerns in the comfort of your home.</p>
+              </Card>
+              <Card className="bg-primary text-primary-foreground shadow-lg rounded-2xl p-8 text-center flex flex-col items-center">
+                <div className="bg-white/20 p-4 rounded-full mb-4">
+                  <HeartPulse className="h-8 w-8" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Chronic Disease Management</h3>
+                <p className="text-sm text-primary-foreground/90">Regular monitoring and management of chronic conditions like diabetes, hypertension, and heart disease.</p>
+              </Card>
+              <Card className="bg-white/80 backdrop-blur-sm shadow-lg rounded-2xl p-8 text-center flex flex-col items-center">
+                <div className="bg-primary/10 text-primary p-4 rounded-full mb-4">
+                  <Beaker className="h-8 w-8" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Lab Sample Collection</h3>
+                <p className="text-sm text-gray-600">Our technicians collect blood and other samples at your home for laboratory testing and analysis.</p>
+              </Card>
+              <Card className="bg-white/80 backdrop-blur-sm shadow-lg rounded-2xl p-8 text-center flex flex-col items-center">
+                <div className="bg-primary/10 text-primary p-4 rounded-full mb-4">
+                  <Stethoscope className="h-8 w-8" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Physiotherapy Services</h3>
+                <p className="text-sm text-gray-600">Professional physiotherapy sessions at home for rehabilitation, pain management, and mobility improvement.</p>
+              </Card>
+              <Card className="bg-white/80 backdrop-blur-sm shadow-lg rounded-2xl p-8 text-center flex flex-col items-center">
+                <div className="bg-primary/10 text-primary p-4 rounded-full mb-4">
+                  <Hospital className="h-8 w-8" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Nursing Care</h3>
+                <p className="text-sm text-gray-600">Skilled nursing services including wound care, injections, IV therapy, and post-operative care.</p>
+              </Card>
+              <Card className="bg-white/80 backdrop-blur-sm shadow-lg rounded-2xl p-8 text-center flex flex-col items-center">
+                <div className="bg-primary/10 text-primary p-4 rounded-full mb-4">
+                  <User className="h-8 w-8" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Dental Consultation</h3>
+                <p className="text-sm text-gray-600">Initial dental assessments, consultations, and minor dental procedures in your home environment.</p>
               </Card>
             </div>
           </div>
