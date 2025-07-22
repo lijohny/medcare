@@ -44,7 +44,7 @@ export function Header() {
           </span>
         </Link>
         
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+        <nav className="hidden lg:flex items-center space-x-6 text-sm font-medium">
           {navLinks.map((link) => (
             <Link
               key={link.label}
@@ -59,7 +59,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center space-x-4">
+        <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2">
                 <Clock className={cn('h-5 w-5', isScrolled ? 'text-primary' : 'text-white')} />
                 <div className={cn('text-sm', isScrolled ? 'text-foreground' : 'text-white')}>
@@ -71,7 +71,7 @@ export function Header() {
            <Button variant={isScrolled ? "default" : "outline"} className={cn(isScrolled ? '' : 'text-white border-white/50 hover:bg-white/10 hover:text-white')}>Book Appointment</Button>
         </div>
 
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className={cn(isScrolled ? '' : 'text-white hover:bg-white/20 hover:text-white')}>
