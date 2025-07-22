@@ -24,7 +24,7 @@ export default function Home() {
               Your browser does not support the video tag.
             </video>
           </div>
-          <div className="relative z-10 container mx-auto px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6 text-center lg:text-left">
                 <div className="flex items-center justify-center lg:justify-start gap-2 text-sm font-semibold tracking-wider uppercase text-yellow-400">
