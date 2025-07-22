@@ -2,17 +2,17 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Hospital, Menu } from 'lucide-react';
+import { Hospital, Menu, Clock } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
-  { href: '#about', label: 'About' },
-  { href: '#how-it-works', label: 'How It Works' },
-  { href: '#testimonials', label: 'Testimonials' },
-  { href: '#', label: 'Contact' },
+  { href: '#', label: 'Home' },
+  { href: '#services', label: 'Services' },
+  { href: '#team', label: 'Our Team' },
+  { href: '#contact', label: 'Contact' },
 ];
 
 export function Header() {
@@ -36,13 +36,14 @@ export function Header() {
           : 'bg-transparent border-b border-transparent'
       )}
     >
-      <div className="container flex h-20 items-center">
+      <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Hospital className={cn('h-8 w-8', isScrolled ? 'text-primary' : 'text-white')} />
           <span className={cn('font-bold text-xl', isScrolled ? 'text-foreground' : 'text-white')}>
             MediHome
           </span>
         </Link>
+        
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
           {navLinks.map((link) => (
             <Link
@@ -57,9 +58,19 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <div className="flex flex-1 items-center justify-end space-x-4">
-           <Button>Book Appointment</Button>
+
+        <div className="hidden md:flex items-center space-x-4">
+            <div className="flex items-center space-x-2">
+                <Clock className={cn('h-5 w-5', isScrolled ? 'text-primary' : 'text-white')} />
+                <div className={cn('text-sm', isScrolled ? 'text-foreground' : 'text-white')}>
+                    <p className="font-semibold">Open Hours</p>
+                    <p className="text-xs">Monday-Saturday 9AM - 6PM</p>
+                </div>
+            </div>
+            <span className={cn('h-8 w-px', isScrolled ? 'bg-border' : 'bg-white/30')}></span>
+           <Button variant={isScrolled ? "default" : "outline"} className={cn(isScrolled ? '' : 'text-white border-white/50 hover:bg-white/10 hover:text-white')}>Book Appointment</Button>
         </div>
+
         <div className="md:hidden">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
@@ -85,6 +96,9 @@ export function Header() {
                   </Link>
                 ))}
               </nav>
+               <div className="mt-8">
+                 <Button className="w-full">Book Appointment</Button>
+               </div>
             </SheetContent>
           </Sheet>
         </div>
