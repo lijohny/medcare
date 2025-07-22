@@ -313,7 +313,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="bg-white p-6 rounded-2xl shadow-lg">
+              <Card className="bg-muted/50 p-6 rounded-2xl shadow-lg">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground font-bold text-lg">01</div>
                   <div className="space-y-2">
@@ -322,7 +322,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </Card>
-              <Card className="bg-white p-6 rounded-2xl shadow-lg">
+              <Card className="bg-muted/50 p-6 rounded-2xl shadow-lg">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground font-bold text-lg">02</div>
                   <div className="space-y-2">
@@ -331,7 +331,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </Card>
-              <Card className="bg-white p-6 rounded-2xl shadow-lg">
+              <Card className="bg-muted/50 p-6 rounded-2xl shadow-lg">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground font-bold text-lg">03</div>
                   <div className="space-y-2">
@@ -340,7 +340,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </Card>
-              <Card className="bg-white p-6 rounded-2xl shadow-lg">
+              <Card className="bg-muted/50 p-6 rounded-2xl shadow-lg">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground font-bold text-lg">04</div>
                   <div className="space-y-2">
