@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Stethoscope, Users, MessageSquareText, CalendarDays, ClipboardPen, Syringe, Plus, ArrowRight } from 'lucide-react';
+import { Stethoscope, Users, MessageSquareText, CalendarDays, ClipboardPen, Syringe, Plus, ArrowRight, User, FolderPlus, History } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function Home() {
@@ -62,6 +62,41 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Features Section */}
+        <section id="features" className="py-16 md:py-24 bg-gray-50">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="bg-white/80 backdrop-blur-sm shadow-lg rounded-2xl flex items-center p-6 gap-4">
+                <div className="bg-primary/10 text-primary p-3 rounded-full">
+                  <User className="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-gray-800">Expert Doctors</h3>
+                  <p className="text-sm text-gray-600">Skilled professionals delivering top-quality care.</p>
+                </div>
+              </Card>
+              <Card className="bg-primary text-primary-foreground shadow-lg rounded-2xl flex items-center p-6 gap-4">
+                <div className="bg-white/20 p-3 rounded-full">
+                  <FolderPlus className="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold">Emergency Care</h3>
+                  <p className="text-sm text-primary-foreground/90">Fast, reliable treatment when you need it most.</p>
+                </div>
+              </Card>
+              <Card className="bg-white/80 backdrop-blur-sm shadow-lg rounded-2xl flex items-center p-6 gap-4">
+                <div className="bg-primary/10 text-primary p-3 rounded-full">
+                  <History className="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-gray-800">24/7 Full Support</h3>
+                  <p className="text-sm text-gray-600">Always here for appointments and emergencies.</p>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </section>
+        
         {/* Commitment Section */}
         <section id="services" className="py-16 md:py-24 bg-gray-50">
           <div className="container mx-auto px-4 md:px-6">
