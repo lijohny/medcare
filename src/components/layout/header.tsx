@@ -73,9 +73,11 @@ export function Header() {
                 <p className={'text-muted-foreground'}>Monday-Saturday 9AM - 6PM</p>
               </div>
             </div>
-           <Button variant="outline" className={cn(
-               isScrolled ? 'border-primary text-primary hover:bg-primary hover:text-primary-foreground' : 'border-primary text-primary hover:bg-primary hover:text-primary-foreground'
-           )}>Book Appointment</Button>
+            <Link href="/book-appointment">
+              <Button variant="outline" className={cn(
+                isScrolled ? 'border-primary text-primary hover:bg-primary hover:text-primary-foreground' : 'border-primary text-primary hover:bg-primary hover:text-primary-foreground'
+              )}>Book Appointment</Button>
+            </Link>
         </div>
 
         <div className="lg:hidden flex items-center gap-2">
@@ -104,7 +106,9 @@ export function Header() {
                 ))}
               </nav>
               <div className="mt-8">
-                <Button variant="default" className="w-full">Book Appointment</Button>
+                <Link href="/book-appointment">
+                  <Button variant="default" className="w-full">Book Appointment</Button>
+                </Link>
               </div>
             </SheetContent>
           </Sheet>

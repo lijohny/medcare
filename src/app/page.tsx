@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Stethoscope, Users, MessageSquareText, CalendarDays, ClipboardPen, Syringe, Plus, ArrowRight, User, FolderPlus, History, PlayCircle, Home, Eye, Beaker, HeartPulse, Hospital, Star, Quote } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const doctors = [
   { name: 'Dr. John Smith', specialty: 'Cardiologist', hint: 'doctor portrait' },
@@ -187,7 +188,9 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-                <Button size="lg">Book Appointment</Button>
+                <Link href="/book-appointment">
+                  <Button size="lg">Book Appointment</Button>
+                </Link>
               </div>
             </div>
           </div>
