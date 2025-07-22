@@ -194,6 +194,53 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* How It Works Section */}
+        <section id="how-it-works" className="py-16 md:py-24 bg-gray-50">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800">How It Works</h2>
+              <p className="mt-4 text-gray-600">
+                Easy steps to get the care you need. Your health is just a few clicks away.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8 text-center">
+              <Card className="bg-white p-8 rounded-2xl shadow-lg">
+                <div className="flex justify-center mb-4">
+                  <div className="bg-primary/10 text-primary p-4 rounded-full">
+                    <ClipboardPen className="h-8 w-8" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Book an Appointment</h3>
+                <p className="text-gray-600">
+                  Schedule your visit online with our easy-to-use booking system.
+                </p>
+              </Card>
+              <Card className="bg-white p-8 rounded-2xl shadow-lg">
+                <div className="flex justify-center mb-4">
+                  <div className="bg-primary/10 text-primary p-4 rounded-full">
+                    <Syringe className="h-8 w-8" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Get Treatment</h3>
+                <p className="text-gray-600">
+                  Receive expert care from our experienced team of medical professionals.
+                </p>
+              </Card>
+              <Card className="bg-white p-8 rounded-2xl shadow-lg">
+                <div className="flex justify-center mb-4">
+                  <div className="bg-primary/10 text-primary p-4 rounded-full">
+                    <MessageSquareText className="h-8 w-8" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Get a Solution</h3>
+                <p className="text-gray-600">
+                  Receive a personalized treatment plan and ongoing support.
+                </p>
+              </Card>
+            </div>
+          </div>
+        </section>
+
       </main>
     </div>
   );
