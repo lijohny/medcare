@@ -1,257 +1,163 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import {
-  ArrowRight,
-  BriefcaseMedical,
-  HeartPulse,
-  Stethoscope,
-  Quote,
-  Star,
-  BrainCircuit,
-  Pill,
-} from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Phone, Mail, MapPin, CheckCircle, Heart, Users, Stethoscope, Star, Quote } from 'lucide-react';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+        {/* Hero Section */}
+        <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center text-center text-white overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            {/* Placeholder for video */}
+            <Image
+              src="https://placehold.co/1920x1080.png"
+              layout="fill"
+              objectFit="cover"
+              alt="Background video placeholder"
+              className="brightness-50"
+              data-ai-hint="medical professional background"
+            />
+          </div>
+          <div className="relative z-10 container px-4 md:px-6">
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4">
+              Your Health, Our Priority Anytime, Anywhere
+            </h1>
+            <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-200 mb-8">
+              We are dedicated to providing the best healthcare services for you and your family.
+            </p>
+            <Button size="lg">Book an Appointment</Button>
+          </div>
+        </section>
+
+        {/* Feature Cards Section */}
+        <section className="py-12 md:py-16 lg:py-20">
           <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16">
-              <div className="flex flex-col justify-center space-y-4">
-                <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                    Your Trusted Partner in Health
-                  </h1>
-                  <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                    MediHome provides comprehensive and compassionate healthcare services, ensuring your well-being is our top priority.
-                  </p>
-                </div>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button size="lg">Book Appointment</Button>
-                  <Button size="lg" variant="outline">
-                    Learn More
-                  </Button>
-                </div>
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              <Card className="text-center p-8 border-none shadow-lg">
+                <Heart className="h-12 w-12 mx-auto mb-4 text-primary" />
+                <h3 className="text-xl font-bold mb-2">Compassionate Care</h3>
+                <p className="text-muted-foreground">We provide care that is respectful of and responsive to individual patient preferences, needs, and values.</p>
+              </Card>
+              <Card className="text-center p-8 border-none shadow-lg">
+                <Users className="h-12 w-12 mx-auto mb-4 text-primary" />
+                <h3 className="text-xl font-bold mb-2">Experienced Team</h3>
+                <p className="text-muted-foreground">Our team of dedicated professionals is equipped with the knowledge and experience to handle your needs.</p>
+              </Card>
+              <Card className="text-center p-8 border-none shadow-lg">
+                <Stethoscope className="h-12 w-12 mx-auto mb-4 text-primary" />
+                <h3 className="text-xl font-bold mb-2">Advanced Technology</h3>
+                <p className="text-muted-foreground">We use state-of-the-art technology to ensure you receive the highest quality diagnosis and treatment.</p>
+              </Card>
+            </div>
+          </div>
+        </section>
+        
+        {/* About Us Section */}
+        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+          <div className="container px-4 md:px-6">
+            <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-24">
+              <div className="space-y-4">
+                <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary font-medium">About Us</div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Who We Are</h2>
+                <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  MediHome is a leading provider of in-home healthcare services, committed to delivering clinical excellence and compassionate care. Our mission is to help our patients live safely and comfortably in their own homes.
+                </p>
+                <Button>Learn More</Button>
               </div>
-              <Image
-                src="https://placehold.co/600x600.png"
+               <Image
+                src="https://placehold.co/600x400.png"
                 width="600"
-                height="600"
-                alt="Hero"
-                className="mx-auto aspect-square overflow-hidden rounded-xl object-cover sm:w-full"
-                data-ai-hint="doctor smiling"
+                height="400"
+                alt="About Us"
+                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover"
+                data-ai-hint="diverse group doctors"
               />
             </div>
           </div>
         </section>
 
-        <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm">Our Services</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Comprehensive Medical Care</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  We offer a wide range of services to meet your health needs, from primary care to specialized treatments.
-                </p>
-              </div>
-            </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 sm:grid-cols-2 md:grid-cols-3 lg:gap-12">
-              <Card>
-                <CardHeader className="flex flex-col items-center text-center">
-                  <div className="p-3 bg-primary/10 rounded-full mb-4">
-                    <Stethoscope className="h-8 w-8 text-primary" />
-                  </div>
-                  <CardTitle>Primary Care</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-muted-foreground">Routine check-ups, preventive care, and treatment for common illnesses.</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader className="flex flex-col items-center text-center">
-                  <div className="p-3 bg-primary/10 rounded-full mb-4">
-                    <HeartPulse className="h-8 w-8 text-primary" />
-                  </div>
-                  <CardTitle>Cardiology</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-muted-foreground">Specialized heart care, including diagnosis and treatment of cardiovascular diseases.</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader className="flex flex-col items-center text-center">
-                  <div className="p-3 bg-primary/10 rounded-full mb-4">
-                    <BrainCircuit className="h-8 w-8 text-primary" />
-                  </div>
-                  <CardTitle>Neurology</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-muted-foreground">Expert diagnosis and management of nervous system disorders.</p>
-                </CardContent>
-              </Card>
-               <Card>
-                <CardHeader className="flex flex-col items-center text-center">
-                  <div className="p-3 bg-primary/10 rounded-full mb-4">
-                    <BriefcaseMedical className="h-8 w-8 text-primary" />
-                  </div>
-                  <CardTitle>Emergency Care</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-muted-foreground">24/7 emergency services for urgent medical needs.</p>
-                </CardContent>
-              </Card>
-               <Card>
-                <CardHeader className="flex flex-col items-center text-center">
-                  <div className="p-3 bg-primary/10 rounded-full mb-4">
-                    <Pill className="h-8 w-8 text-primary" />
-                  </div>
-                  <CardTitle>Pharmacy</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-muted-foreground">On-site pharmacy for convenient prescription filling.</p>
-                </CardContent>
-              </Card>
-                 <Card>
-                <CardHeader className="flex flex-col items-center text-center">
-                  <div className="p-3 bg-primary/10 rounded-full mb-4">
-                    <Stethoscope className="h-8 w-8 text-primary" />
-                  </div>
-                  <CardTitle>Diagnostics</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-muted-foreground">Advanced imaging and lab services for accurate diagnosis.</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm">Testimonials</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">What Our Patients Say</h2>
-                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Hear from our patients about their experience with MediHome.
-                </p>
-              </div>
-            </div>
-            <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:grid-cols-3 lg:gap-12 py-12">
-              <Card className="p-6">
-                 <CardContent className="p-0">
-                  <div className="flex items-center mb-4">
-                    <Quote className="w-8 h-8 text-primary" />
-                  </div>
-                  <p className="text-muted-foreground mb-4">The care I received at MediHome was exceptional. The doctors and staff were incredibly professional and compassionate.</p>
-                  <div className="flex items-center gap-2">
-                    <div className="flex items-center gap-0.5">
-                      <Star className="w-4 h-4 fill-primary text-primary" />
-                      <Star className="w-4 h-4 fill-primary text-primary" />
-                      <Star className="w-4 h-4 fill-primary text-primary" />
-                      <Star className="w-4 h-4 fill-primary text-primary" />
-                      <Star className="w-4 h-4 fill-primary text-primary" />
-                    </div>
-                  </div>
-                  <p className="font-semibold mt-4">Sarah L.</p>
-                </CardContent>
-              </Card>
-              <Card className="p-6">
-                <CardContent className="p-0">
-                  <div className="flex items-center mb-4">
-                    <Quote className="w-8 h-8 text-primary" />
-                  </div>
-                  <p className="text-muted-foreground mb-4">I am so grateful for the team at MediHome. They went above and beyond to ensure I was comfortable and well-cared for.</p>
-                   <div className="flex items-center gap-2">
-                    <div className="flex items-center gap-0.5">
-                      <Star className="w-4 h-4 fill-primary text-primary" />
-                      <Star className="w-4 h-4 fill-primary text-primary" />
-                      <Star className="w-4 h-4 fill-primary text-primary" />
-                      <Star className="w-4 h-4 fill-primary text-primary" />
-                      <Star className="w-4 h-4 fill-primary text-primary" />
-                    </div>
-                  </div>
-                  <p className="font-semibold mt-4">John D.</p>
-                </CardContent>
-              </Card>
-               <Card className="p-6">
-                <CardContent className="p-0">
-                  <div className="flex items-center mb-4">
-                    <Quote className="w-8 h-8 text-primary" />
-                  </div>
-                  <p className="text-muted-foreground mb-4">The quality of care and the friendly atmosphere make MediHome the best choice for our family's healthcare needs.</p>
-                   <div className="flex items-center gap-2">
-                    <div className="flex items-center gap-0.5">
-                      <Star className="w-4 h-4 fill-primary text-primary" />
-                      <Star className="w-4 h-4 fill-primary text-primary" />
-                      <Star className="w-4 h-4 fill-primary text-primary" />
-                      <Star className="w-4 h-4 fill-primary text-primary" />
-                      <Star className="w-4 h-4 text-muted" />
-                    </div>
-                  </div>
-                  <p className="font-semibold mt-4">Maria S.</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        <section id="blog" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
-          <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
-            <div className="space-y-3">
-               <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm">Our Blog</div>
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Health Insights and News</h2>
-              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Stay informed with the latest health tips, news, and insights from our medical experts.
+        {/* How It Works Section */}
+        <section id="how-it-works" className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6 text-center">
+            <div className="space-y-4 mb-12">
+              <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary font-medium">How It Works</div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Your Path to Better Health</h2>
+              <p className="max-w-[700px] mx-auto text-muted-foreground md:text-xl/relaxed">
+                We've simplified the process to ensure you get the care you need, right when you need it.
               </p>
             </div>
-            <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:grid-cols-3 lg:gap-12 py-12">
-               <Card>
-                <Image
-                  src="https://placehold.co/400x250.png"
-                  width={400}
-                  height={250}
-                  alt="Blog post image"
-                  className="rounded-t-lg object-cover w-full aspect-[16/9]"
-                  data-ai-hint="healthy food"
-                />
-                <CardContent className="p-4 text-left">
-                  <h3 className="text-lg font-bold mb-2">The Importance of a Balanced Diet</h3>
-                  <p className="text-sm text-muted-foreground mb-4">Learn how a balanced diet can improve your overall health and well-being.</p>
-                  <Button variant="link" className="p-0">Read More <ArrowRight className="ml-2 h-4 w-4" /></Button>
+            <div className="grid gap-8 md:grid-cols-3">
+              <div className="flex flex-col items-center">
+                 <div className="flex items-center justify-center bg-primary text-primary-foreground rounded-full h-16 w-16 text-2xl font-bold mb-4">1</div>
+                 <h3 className="text-xl font-bold mb-2">Book an Appointment</h3>
+                 <p className="text-muted-foreground">Easily schedule a visit online or by phone with one of our specialists.</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="flex items-center justify-center bg-primary text-primary-foreground rounded-full h-16 w-16 text-2xl font-bold mb-4">2</div>
+                <h3 className="text-xl font-bold mb-2">Get a Consultation</h3>
+                <p className="text-muted-foreground">Receive a thorough consultation from the comfort of your home via telehealth or an in-person visit.</p>
+              </div>
+               <div className="flex flex-col items-center">
+                <div className="flex items-center justify-center bg-primary text-primary-foreground rounded-full h-16 w-16 text-2xl font-bold mb-4">3</div>
+                <h3 className="text-xl font-bold mb-2">Receive Treatment</h3>
+                <p className="text-muted-foreground">Get a personalized treatment plan and ongoing support from our dedicated care team.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+          <div className="container px-4 md:px-6">
+            <div className="text-center space-y-4 mb-12">
+               <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary font-medium">Testimonials</div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">What Our Patients Say</h2>
+              <p className="max-w-[700px] mx-auto text-muted-foreground md:text-xl/relaxed">
+                Real stories from people we've helped on their journey to wellness.
+              </p>
+            </div>
+            <div className="mx-auto grid max-w-5xl gap-8 sm:grid-cols-1 lg:grid-cols-2">
+              <Card className="p-6 border-none shadow-lg">
+                <CardContent className="p-0">
+                  <Quote className="w-8 h-8 text-primary mb-4" />
+                  <p className="text-muted-foreground mb-6">"The care and attention I received were outstanding. The team at MediHome made me feel comfortable and secure throughout my recovery."</p>
+                  <div className="flex items-center gap-4">
+                    <Avatar>
+                      <AvatarImage src="https://placehold.co/40x40.png" alt="Jane Doe" data-ai-hint="woman smiling" />
+                      <AvatarFallback>JD</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <p className="font-semibold">Jane Doe</p>
+                      <div className="flex items-center gap-0.5">
+                        {[...Array(5)].map((_, i) => (
+                           <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
-                <Card>
-                <Image
-                  src="https://placehold.co/400x250.png"
-                  width={400}
-                  height={250}
-                  alt="Blog post image"
-                  className="rounded-t-lg object-cover w-full aspect-[16/9]"
-                  data-ai-hint="person exercising"
-                />
-                <CardContent className="p-4 text-left">
-                  <h3 className="text-lg font-bold mb-2">Benefits of Regular Exercise</h3>
-                  <p className="text-sm text-muted-foreground mb-4">Discover the positive impact of regular physical activity on your mental and physical health.</p>
-                  <Button variant="link" className="p-0">Read More <ArrowRight className="ml-2 h-4 w-4" /></Button>
-                </CardContent>
-              </Card>
-                <Card>
-                <Image
-                  src="https://placehold.co/400x250.png"
-                  width={400}
-                  height={250}
-                  alt="Blog post image"
-                  className="rounded-t-lg object-cover w-full aspect-[16/9]"
-                  data-ai-hint="person sleeping"
-                />
-                <CardContent className="p-4 text-left">
-                  <h3 className="text-lg font-bold mb-2">The Power of a Good Night's Sleep</h3>
-                  <p className="text-sm text-muted-foreground mb-4">Understand why quality sleep is crucial for your health and get tips for better rest.</p>
-                  <Button variant="link" className="p-0">Read More <ArrowRight className="ml-2 h-4 w-4" /></Button>
+              <Card className="p-6 border-none shadow-lg">
+                 <CardContent className="p-0">
+                  <Quote className="w-8 h-8 text-primary mb-4" />
+                  <p className="text-muted-foreground mb-6">"Booking an appointment was so easy, and the virtual consultation was just as thorough as an in-person visit. Highly recommend!"</p>
+                  <div className="flex items-center gap-4">
+                    <Avatar>
+                      <AvatarImage src="https://placehold.co/40x40.png" alt="John Smith" data-ai-hint="man smiling"/>
+                      <AvatarFallback>JS</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <p className="font-semibold">John Smith</p>
+                      <div className="flex items-center gap-0.5">
+                        {[...Array(5)].map((_, i) => (
+                           <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </div>
