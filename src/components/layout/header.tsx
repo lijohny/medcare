@@ -17,29 +17,18 @@ const navLinks = [
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <header
       className={cn(
         'sticky top-0 z-50 w-full transition-all duration-300',
-        isScrolled
-          ? 'bg-background/80 backdrop-blur-sm border-b'
-          : 'bg-transparent border-b border-transparent'
+        'bg-background/80 backdrop-blur-sm border-b'
       )}
     >
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Hospital className={cn('h-8 w-8', isScrolled ? 'text-primary' : 'text-white')} />
-          <span className={cn('font-bold text-xl', isScrolled ? 'text-foreground' : 'text-white')}>
+          <Hospital className='h-8 w-8 text-primary' />
+          <span className='font-bold text-xl text-foreground'>
             MediHome
           </span>
         </Link>
@@ -51,7 +40,7 @@ export function Header() {
               href={link.href}
               className={cn(
                 'transition-colors hover:text-primary',
-                isScrolled ? 'text-foreground/80' : 'text-white/80 hover:text-white'
+                'text-foreground/80'
               )}
             >
               {link.label}
@@ -61,20 +50,20 @@ export function Header() {
 
         <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2">
-                <Clock className={cn('h-5 w-5', isScrolled ? 'text-primary' : 'text-white')} />
-                <div className={cn('text-sm', isScrolled ? 'text-foreground' : 'text-white')}>
+                <Clock className='h-5 w-5 text-primary' />
+                <div className='text-sm text-foreground'>
                     <p className="font-semibold">Open Hours</p>
                     <p className="text-xs">Monday-Saturday 9AM - 6PM</p>
                 </div>
             </div>
-            <span className={cn('h-8 w-px', isScrolled ? 'bg-border' : 'bg-white/30')}></span>
-           <Button variant={isScrolled ? "default" : "outline"} className={cn(isScrolled ? '' : 'text-white border-white/50 hover:bg-white/10 hover:text-white')}>Book Appointment</Button>
+            <span className='h-8 w-px bg-border'></span>
+           <Button variant="default">Book Appointment</Button>
         </div>
 
         <div className="lg:hidden">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className={cn(isScrolled ? '' : 'text-white hover:bg-white/20 hover:text-white')}>
+              <Button variant="ghost" size="icon">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Open menu</span>
               </Button>
