@@ -3,6 +3,13 @@ import { Stethoscope, Users, MessageSquareText, CalendarDays, ClipboardPen, Syri
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 
+const doctors = [
+  { name: 'Dr. John Smith', specialty: 'Cardiologist', hint: 'doctor portrait' },
+  { name: 'Dr. Sarah Johnson', specialty: 'Orthopedic Surgeon', hint: 'doctor portrait' },
+  { name: 'Dr. Michael Lee', specialty: 'Pediatrician', hint: 'doctor portrait' },
+  { name: 'Dr. Emily Davis', specialty: 'Gynecologist', hint: 'doctor portrait' },
+];
+
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
@@ -251,6 +258,41 @@ export default function HomePage() {
                 <h3 className="text-xl font-bold text-gray-800 mb-2">Dental Consultation</h3>
                 <p className="text-sm text-gray-600">Initial dental assessments, consultations, and minor dental procedures in your home environment.</p>
               </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Team Section */}
+        <section id="team" className="py-16 md:py-24 bg-white">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <div className="flex items-center justify-center gap-2 text-sm font-semibold tracking-wider uppercase text-primary">
+                <Plus className="h-5 w-5 bg-primary text-primary-foreground rounded-full p-0.5" />
+                <span>Our Doctors</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mt-2">Meet Our Specialist Doctors</h2>
+              <p className="mt-4 text-gray-600">
+                Our team of specialist doctors is dedicated to providing expert care across a wide range of medical fields.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {doctors.map((doctor) => (
+                <div key={doctor.name} className="text-center">
+                  <div className="bg-gray-200 rounded-2xl mb-4">
+                    <Image
+                      src="https://placehold.co/300x400.png"
+                      alt={`Portrait of ${doctor.name}`}
+                      data-ai-hint={doctor.hint}
+                      width={300}
+                      height={400}
+                      className="rounded-2xl object-cover w-full h-full"
+                    />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900">{doctor.name}</h3>
+                  <p className="text-sm text-gray-600">{doctor.specialty}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
