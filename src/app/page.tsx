@@ -1,8 +1,9 @@
 import { Button } from '@/components/ui/button';
-import { Stethoscope, Users, MessageSquareText, CalendarDays, ClipboardPen, Syringe, Plus, ArrowRight, User, FolderPlus, History } from 'lucide-react';
+import { Stethoscope, Users, MessageSquareText, CalendarDays, ClipboardPen, Syringe, Plus, ArrowRight, User, FolderPlus, History, PlayCircle, Home, Eye } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Image from 'next/image';
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <main className="flex-1">
@@ -96,7 +97,77 @@ export default function Home() {
             </div>
           </div>
         </section>
-        
+
+        {/* About Us Section */}
+        <section id="about-us" className="py-16 md:py-24 bg-white">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="relative flex justify-center items-center h-[500px]">
+                <div className="absolute top-0 left-0 w-3/4 h-full">
+                  <Image
+                    src="https://placehold.co/400x600.png"
+                    alt="Clinic Interior"
+                    data-ai-hint="clinic interior"
+                    width={400}
+                    height={600}
+                    className="rounded-3xl object-cover h-full w-full shadow-lg"
+                  />
+                </div>
+                <div className="relative ml-auto w-3/4 h-3/4">
+                   <Image
+                      src="https://placehold.co/400x400.png"
+                      alt="Doctor and patient"
+                      data-ai-hint="doctor patient"
+                      width={400}
+                      height={400}
+                      className="rounded-3xl object-cover h-full w-full shadow-2xl"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/20 rounded-3xl">
+                      <button className="text-white">
+                        <PlayCircle className="h-20 w-20 hover:scale-110 transition-transform"/>
+                      </button>
+                    </div>
+                </div>
+              </div>
+              <div className="space-y-8">
+                <div className="flex items-center gap-3">
+                  <div className="bg-primary/10 text-primary p-1.5 rounded-md">
+                    <ArrowRight className="h-5 w-5" />
+                  </div>
+                  <span className="text-primary font-semibold tracking-wider">ABOUT US</span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
+                  MediHome Create A Safe, Your Health Our Priority
+                </h2>
+                <p className="text-gray-600">
+                  MediHome provides top-quality healthcare with experienced doctors, emergency services, and round-the-clock support. Your trusted partner for a healthier life.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                  <div className="flex gap-4">
+                    <div className="bg-primary/10 text-primary p-3 rounded-full h-fit">
+                      <Stethoscope className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-gray-800 mb-1">Our Vision</h4>
+                      <p className="text-sm text-gray-600">To be a trusted leader in quality, accessible, and compassionate healthcare.</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-4">
+                    <div className="bg-primary/10 text-primary p-3 rounded-full h-fit">
+                      <Home className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-gray-800 mb-1">Our Vision</h4>
+                      <p className="text-sm text-gray-600">MediHome delivers expert, patient-focused care with 24/7, advanced technology, and a focus on wellness.</p>
+                    </div>
+                  </div>
+                </div>
+                <Button size="lg">Book Appointment</Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Commitment Section */}
         <section id="services" className="py-16 md:py-24 bg-gray-50">
           <div className="container mx-auto px-4 md:px-6">
