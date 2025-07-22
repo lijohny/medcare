@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Stethoscope, Users, MessageSquareText } from 'lucide-react';
+import { Stethoscope, Users, MessageSquareText, CalendarDays, ClipboardPen, Syringe } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function Home() {
@@ -100,6 +100,50 @@ export default function Home() {
                   </p>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* How It Works Section */}
+        <section id="how-it-works" className="py-16 md:py-24 bg-white">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800">How It Works</h2>
+              <p className="mt-4 text-lg text-gray-600">
+                Our streamlined process ensures you receive the best care without any hassle.
+              </p>
+            </div>
+            <div className="relative">
+              <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5">
+                  <div className="absolute top-1/2 left-0 w-full h-0.5">
+                    <svg width="100%" height="2">
+                      <line x1="0" y1="1" x2="100%" y2="1" stroke="#e5e7eb" strokeWidth="2" strokeDasharray="8 8" />
+                    </svg>
+                  </div>
+              </div>
+              <div className="grid md:grid-cols-3 gap-12 text-center relative">
+                <div className="flex flex-col items-center">
+                  <div className="bg-primary/10 text-primary p-5 rounded-full mb-6 relative z-10">
+                    <CalendarDays className="h-10 w-10" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-3">Book an Appointment</h3>
+                  <p className="text-gray-600">Schedule your appointment online or by phone.</p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="bg-primary/10 text-primary p-5 rounded-full mb-6 relative z-10">
+                    <ClipboardPen className="h-10 w-10" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-3">Get a Diagnosis</h3>
+                  <p className="text-gray-600">Our expert team will conduct a thorough assessment.</p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="bg-primary/10 text-primary p-5 rounded-full mb-6 relative z-10">
+                    <Syringe className="h-10 w-10" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-3">Receive Your Treatment</h3>
+                  <p className="text-gray-600">Personalized care and treatment in the comfort of your home.</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
