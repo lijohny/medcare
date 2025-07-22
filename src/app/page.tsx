@@ -297,6 +297,62 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* How It Works Section */}
+        <section id="how-it-works" className="py-16 md:py-24 bg-gray-50">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 text-sm font-semibold tracking-wider uppercase text-primary">
+                  <Plus className="h-5 w-5" />
+                  <span>How It Works</span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Trusted Healthcare With A Focus On Your Well-Being</h2>
+              </div>
+              <p className="text-gray-600">
+                At MediHome, we've streamlined the healthcare process to ensure you receive the best care with ease and convenience.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="bg-white p-6 rounded-2xl shadow-lg">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground font-bold text-lg">01</div>
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-bold text-gray-800">Book An Appointment</h3>
+                    <p className="text-gray-600">Schedule your visit through our easy-to-use online platform or by calling our friendly support team. Choose the time that works best for you.</p>
+                  </div>
+                </div>
+              </Card>
+              <Card className="bg-white p-6 rounded-2xl shadow-lg">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground font-bold text-lg">02</div>
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-bold text-gray-800">Consult Our Experts</h3>
+                    <p className="text-gray-600">Meet with our highly skilled doctors and medical specialists who will listen to your concerns, provide an accurate diagnosis, and recommend the effective treatment options.</p>
+                  </div>
+                </div>
+              </Card>
+              <Card className="bg-white p-6 rounded-2xl shadow-lg">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground font-bold text-lg">03</div>
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-bold text-gray-800">Receive Care</h3>
+                    <p className="text-gray-600">Once a treatment plan is established, our team ensures you receive the necessary medical services, whether it's a prescription from our pharmacy, specialized care.</p>
+                  </div>
+                </div>
+              </Card>
+              <Card className="bg-white p-6 rounded-2xl shadow-lg">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground font-bold text-lg">04</div>
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-bold text-gray-800">Follow-Up</h3>
+                    <p className="text-gray-600">After your treatment, we stay connected for follow-up consultations, ensuring your recovery is progressing smoothly and addressing any further questions you may have.</p>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </section>
+
       </main>
     </div>
   );
