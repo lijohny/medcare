@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Stethoscope, Users, MessageSquareText, CalendarDays, ClipboardPen, Syringe, Plus, ArrowRight, User, FolderPlus, History, PlayCircle, Home, Eye, Beaker, HeartPulse, Hospital } from 'lucide-react';
+import { Stethoscope, Users, MessageSquareText, CalendarDays, ClipboardPen, Syringe, Plus, ArrowRight, User, FolderPlus, History, PlayCircle, Home, Eye, Beaker, HeartPulse, Hospital, Star, Quote } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 
@@ -8,6 +8,24 @@ const doctors = [
   { name: 'Dr. Sarah Johnson', specialty: 'Orthopedic Surgeon', hint: 'doctor portrait' },
   { name: 'Dr. Michael Lee', specialty: 'Pediatrician', hint: 'doctor portrait' },
   { name: 'Dr. Emily Davis', specialty: 'Gynecologist', hint: 'doctor portrait' },
+];
+
+const testimonials = [
+  {
+    name: 'Samantha Elizabeth',
+    location: 'New York, NY',
+    quote: 'I had an excellent experience at MediHome during a recent emergency. The team was incredibly supportive and attentive, and I received prompt treatment. I truly felt cared for and reassured throughout the entire process.',
+  },
+  {
+    name: 'Olivia Marie',
+    location: 'Los Angeles, CA',
+    quote: 'CareLink has been my go-to for health consultations, and I am always impressed by the professionalism and genuine care from the doctors. They take the time to listen and explain things, making every visit feel personal.',
+  },
+  {
+    name: 'Jessica Claire',
+    location: 'Chicago, IL',
+    quote: "The specialists at MediHome provided me with the guidance I needed to manage my health condition. Their expertise and timely support made a huge difference in my recovery, and I'm grateful for the comprehensive care I received.",
+  },
 ];
 
 export default function HomePage() {
@@ -349,6 +367,46 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section id="testimonials" className="py-16 md:py-24 bg-primary text-white">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center max-w-4xl mx-auto mb-12">
+              <div className="flex items-center justify-center gap-2 text-sm font-semibold tracking-wider uppercase text-orange-400">
+                <Plus className="h-5 w-5 bg-orange-400 text-black rounded-full p-0.5" />
+                <span>Patient Testimonials</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mt-4">Hear From Those Who Trust Care Link</h2>
+              <p className="mt-4 text-primary-foreground/80 max-w-2xl mx-auto">
+                Our patients' experiences speak volumes. Read how MediHome has provided compassionate, expert care and made a difference in their lives.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial) => (
+                <div key={testimonial.name} className="space-y-4 relative">
+                  <div className="flex items-center gap-4">
+                    <div className="w-16 h-16 rounded-lg bg-gray-300 flex-shrink-0">
+                       <Image src="https://placehold.co/64x64.png" width={64} height={64} alt="User avatar" className="rounded-lg object-cover" data-ai-hint="user avatar" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg">{testimonial.name}</h3>
+                      <p className="text-sm text-primary-foreground/80">{testimonial.location}</p>
+                    </div>
+                    <div className="absolute top-0 right-0 bg-orange-400 text-black rounded-full p-2">
+                      <Quote className="h-6 w-6" />
+                    </div>
+                  </div>
+                  <p className="text-primary-foreground/90">{testimonial.quote}</p>
+                  <div className="flex items-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
