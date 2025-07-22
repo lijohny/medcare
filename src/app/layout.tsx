@@ -24,7 +24,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-background font-body antialiased" suppressHydrationWarning>
-        <div className="container relative flex min-h-dvh flex-col">
+        <div className="container mx-auto px-4 relative flex min-h-dvh flex-col">
           <Header />
           <main className="flex-1">{children}</main>
         </div>
