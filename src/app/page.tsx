@@ -298,7 +298,7 @@ export default function HomePage() {
         </section>
 
         {/* How It Works Section */}
-        <section id="how-it-works" className="py-16 md:py-24 bg-white">
+        <section id="how-it-works" className="py-16 md:py-24" style={{ backgroundColor: '#F0F4FF' }}>
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
               <div className="space-y-4">
@@ -313,42 +313,42 @@ export default function HomePage() {
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="bg-muted/50 p-6 rounded-2xl shadow-lg">
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground font-bold text-lg">01</div>
+              <div className="p-6">
+                <div className="flex items-center gap-6">
+                  <div className="flex-shrink-0 flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground font-bold text-2xl">01</div>
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold text-gray-800">Book An Appointment</h3>
                     <p className="text-gray-600">Schedule your visit through our easy-to-use online platform or by calling our friendly support team. Choose the time that works best for you.</p>
                   </div>
                 </div>
-              </Card>
-              <Card className="bg-muted/50 p-6 rounded-2xl shadow-lg">
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground font-bold text-lg">02</div>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center gap-6">
+                  <div className="flex-shrink-0 flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground font-bold text-2xl">02</div>
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold text-gray-800">Consult Our Experts</h3>
                     <p className="text-gray-600">Meet with our highly skilled doctors and medical specialists who will listen to your concerns, provide an accurate diagnosis, and recommend the effective treatment options.</p>
                   </div>
                 </div>
-              </Card>
-              <Card className="bg-muted/50 p-6 rounded-2xl shadow-lg">
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground font-bold text-lg">03</div>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center gap-6">
+                  <div className="flex-shrink-0 flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground font-bold text-2xl">03</div>
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold text-gray-800">Receive Care</h3>
                     <p className="text-gray-600">Once a treatment plan is established, our team ensures you receive the necessary medical services, whether it's a prescription from our pharmacy, specialized care.</p>
                   </div>
                 </div>
-              </Card>
-              <Card className="bg-muted/50 p-6 rounded-2xl shadow-lg">
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground font-bold text-lg">04</div>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center gap-6">
+                  <div className="flex-shrink-0 flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground font-bold text-2xl">04</div>
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold text-gray-800">Follow-Up</h3>
                     <p className="text-gray-600">After your treatment, we stay connected for follow-up consultations, ensuring your recovery is progressing smoothly and addressing any further questions you may have.</p>
                   </div>
                 </div>
-              </Card>
+              </div>
             </div>
           </div>
         </section>
