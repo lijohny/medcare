@@ -95,7 +95,7 @@ export default function UserManagementPage() {
     }
 
   return (
-    <div className="py-6">
+    <div className="p-4 md:p-8 pt-6">
         <Tabs value={activeTab} onValueChange={setActiveTab}>
             <div className="flex items-center pb-4 gap-4">
                 <TabsList>

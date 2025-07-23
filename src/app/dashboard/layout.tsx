@@ -60,12 +60,12 @@ export default function DashboardLayout({
               </SidebarMenu>
             </SidebarContent>
         </Sidebar>
-        <SidebarInset>
-            <AdminHeader />
-            <main className="flex-1 flex flex-col">
-                {children}
-            </main>
-        </SidebarInset>
+        <div className="flex flex-col flex-1">
+          <AdminHeader />
+          <main className="flex-1">
+            <SidebarInset>{children}</SidebarInset>
+          </main>
+        </div>
       </div>
     </SidebarProvider>
   );
