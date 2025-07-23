@@ -12,7 +12,7 @@ export default function DashboardLayout({
 }) {
   return (
     <SidebarProvider>
-      <div className="flex h-full min-h-screen bg-muted/40">
+      <div className="flex h-screen bg-muted/40">
         <Sidebar>
             <SidebarHeader />
             <SidebarContent className="pl-4">
@@ -60,9 +60,9 @@ export default function DashboardLayout({
               </SidebarMenu>
             </SidebarContent>
         </Sidebar>
-        <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14 flex-1">
+        <div className="flex flex-col flex-1">
           <AdminHeader />
-          <main className="flex-1">
+          <main className="flex-1 overflow-y-auto">
             <SidebarInset>{children}</SidebarInset>
           </main>
         </div>
