@@ -78,12 +78,6 @@ export function Header() {
                 isScrolled ? 'border-primary text-primary hover:bg-primary hover:text-primary-foreground' : 'border-primary text-primary hover:bg-primary hover:text-primary-foreground'
               )}>Book Appointment</Button>
             </Link>
-             <Link href="/login">
-              <Button variant="ghost">
-                <LogIn className="mr-2 h-4 w-4" />
-                Login
-              </Button>
-            </Link>
         </div>
 
         <div className="lg:hidden flex items-center gap-2">
@@ -114,12 +108,6 @@ export function Header() {
               <div className="mt-8 space-y-4">
                 <Link href="/book-appointment">
                   <Button variant="default" className="w-full">Book Appointment</Button>
-                </Link>
-                 <Link href="/login">
-                  <Button variant="outline" className="w-full">
-                    <LogIn className="mr-2 h-4 w-4" />
-                    Login
-                  </Button>
                 </Link>
               </div>
             </SheetContent>
