@@ -1,19 +1,25 @@
+'use client';
+
 import type { Metadata } from 'next';
 import './globals.css';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
-
-export const metadata: Metadata = {
-  title: 'MediHome',
-  description: 'Your trusted partner in home healthcare.',
-};
+import { usePathname } from 'next/navigation';
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+  const isAdminRoute = pathname.startsWith('/dashboard');
+
+  const metadata: Metadata = {
+    title: 'MediHome',
+    description: 'Your trusted partner in home healthcare.',
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -26,9 +32,9 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-background font-body antialiased" suppressHydrationWarning>
         <div className="relative flex min-h-dvh flex-col">
-          <Header />
+          {!isAdminRoute && <Header />}
           <main className="flex-1">{children}</main>
-          <Footer />
+          {!isAdminRoute && <Footer />}
         </div>
         <Toaster />
       </body>
