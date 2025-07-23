@@ -49,7 +49,7 @@ export default function DashboardLayout({
                   </Link>
                 </SidebarMenuItem>
                 <SidebarMenuItem>
-                  <Link href="#">
+                  <Link href="/dashboard/user-management">
                     <SidebarMenuButton>
                       <UserCog />
                       User Management
