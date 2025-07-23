@@ -53,7 +53,7 @@ export default function DashboardLayout({
         </Sidebar>
         <div className="flex flex-col flex-1">
           <AdminHeader />
-          <main className="flex-1 p-4 sm:px-6 sm:py-0 md:gap-8">
+          <main className="flex-1 container mx-auto p-4 sm:px-6 sm:py-0 md:gap-8">
             {children}
           </main>
         </div>
