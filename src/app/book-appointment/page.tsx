@@ -210,7 +210,7 @@ export default function BookAppointmentPage() {
                   )}
                    <div className="flex justify-end pt-4">
                      <Button type="button" size="lg" onClick={handleNext}>
-                        Next
+                        Continue
                       </Button>
                    </div>
                 </div>
