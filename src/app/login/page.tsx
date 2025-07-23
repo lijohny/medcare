@@ -27,12 +27,6 @@ export default function LoginPage() {
           <Link href="/dashboard" className="w-full">
             <Button className="w-full">Login</Button>
           </Link>
-          <p className="mt-4 text-xs text-center text-gray-700">
-            Don't have an account?{' '}
-            <Link href="#" className=" text-blue-600 hover:underline">
-              Sign up
-            </Link>
-          </p>
         </CardFooter>
       </Card>
     </div>
