@@ -14,7 +14,7 @@ export default function DashboardLayout({
       <div className="flex h-full min-h-screen bg-muted/40">
         <Sidebar>
             <SidebarHeader />
-            <SidebarContent className="pl-2">
+            <SidebarContent className="pl-4">
               <SidebarMenu>
                 <SidebarMenuItem>
                   <Link href="/dashboard">
