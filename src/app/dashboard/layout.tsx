@@ -1,7 +1,7 @@
 import { AdminHeader } from '@/components/layout/admin-header';
 import { Sidebar, SidebarProvider, SidebarInset } from '@/components/ui/sidebar';
 import { SidebarContent, SidebarHeader, SidebarMenu, SidebarMenuItem, SidebarMenuButton } from '@/components/ui/sidebar';
-import { LayoutDashboard, Users, CreditCard, Activity } from 'lucide-react';
+import { LayoutDashboard, Users, CreditCard, Activity, UserCog } from 'lucide-react';
 import Link from 'next/link';
 
 export default function DashboardLayout({
@@ -45,6 +45,14 @@ export default function DashboardLayout({
                     <SidebarMenuButton>
                       <Activity />
                       Activity
+                    </SidebarMenuButton>
+                  </Link>
+                </SidebarMenuItem>
+                <SidebarMenuItem>
+                  <Link href="#">
+                    <SidebarMenuButton>
+                      <UserCog />
+                      User Management
                     </SidebarMenuButton>
                   </Link>
                 </SidebarMenuItem>
