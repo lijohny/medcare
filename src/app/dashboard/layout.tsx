@@ -17,7 +17,7 @@ export default function DashboardLayout({
             <SidebarContent>
               <SidebarMenu>
                 <SidebarMenuItem>
-                  <Link href="/dashboard" legacyBehavior passHref>
+                  <Link href="/dashboard">
                     <SidebarMenuButton isActive>
                       <LayoutDashboard />
                       Dashboard
@@ -25,7 +25,7 @@ export default function DashboardLayout({
                   </Link>
                 </SidebarMenuItem>
                  <SidebarMenuItem>
-                   <Link href="#" legacyBehavior passHref>
+                   <Link href="#">
                     <SidebarMenuButton>
                       <Users />
                       Appointments
@@ -33,7 +33,7 @@ export default function DashboardLayout({
                   </Link>
                 </SidebarMenuItem>
                  <SidebarMenuItem>
-                  <Link href="#" legacyBehavior passHref>
+                  <Link href="#">
                     <SidebarMenuButton>
                       <CreditCard />
                       New Patients
@@ -41,7 +41,7 @@ export default function DashboardLayout({
                   </Link>
                 </SidebarMenuItem>
                  <SidebarMenuItem>
-                  <Link href="#" legacyBehavior passHref>
+                  <Link href="#">
                     <SidebarMenuButton>
                       <Activity />
                       Activity
