@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const pathname = usePathname();
-  const isAdminRoute = pathname.startsWith('/dashboard');
+  const isSpecialRoute = pathname.startsWith('/dashboard') || pathname === '/login';
 
   const metadata: Metadata = {
     title: 'MediHome',
@@ -32,9 +32,9 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-background font-body antialiased" suppressHydrationWarning>
         <div className="relative flex min-h-dvh flex-col">
-          {!isAdminRoute && <Header />}
+          {!isSpecialRoute && <Header />}
           <main className="flex-1">{children}</main>
-          {!isAdminRoute && <Footer />}
+          {!isSpecialRoute && <Footer />}
         </div>
         <Toaster />
       </body>
